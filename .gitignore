@@ -1,0 +1,17 @@
+
+# Large assets.
+*.tif
+*.tiff
+*.psd
+*.zip
+
+
+# Temporary files.
+*.log
+
+
+# Directories.
+/__pycache__/
+/__old*/
+/_archive/
+/_test/
