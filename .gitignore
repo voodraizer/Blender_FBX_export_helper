@@ -8,6 +8,7 @@
 
 # Temporary files.
 *.log
+*.code-workspace
 
 
 # Directories.
