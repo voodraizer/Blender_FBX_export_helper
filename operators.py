@@ -10,6 +10,8 @@ from mathutils import Vector
 from fbx_export_helper.functions import *
 
 
+
+
 # -----------------------------------------------------------------------------------------
 # 
 # -----------------------------------------------------------------------------------------
@@ -23,30 +25,32 @@ class ExportHelper_OT_ExportByName(Operator):
 		return True
 
 	def execute(self, context):
+		print("===============================================================================")
+
 		export_settings =  bpy.context.scene.export_helper_settings
 
 		all_objects = context.scene.objects
-		#ExportBatchHelperOperator(self, context, all_objects)
+		# #ExportBatchHelperOperator(self, context, all_objects)
 
-		#exported_objects = CollectAllExported(all_objects)
-		exported_objects = CollectExportedObjectsByName(all_objects)
-		#exported_objects = CollectShadowAndOutlineObjects(all_objects)
+		# #exported_objects = CollectAllExported(all_objects)
+		# exported_objects = CollectExportedObjectsByName(all_objects)
+		# #exported_objects = CollectShadowAndOutlineObjects(all_objects)
 
-		print(exported_objects)
+		# print(exported_objects)
 
-		# for o in all_objects:
-		# 	o.hide_select = True
-		# 	o.hide_viewport = True
-		# 	o.hide_render = True
+		# # for o in all_objects:
+		# # 	o.hide_select = True
+		# # 	o.hide_viewport = True
+		# # 	o.hide_render = True
 
-		# export_name = ''
-		# indx = obj.name.index("_LOD")
-		# if (indx != -1):
-		# 	export_name = obj.name[0:indx]
-		# ExportFbx(exported_objects, export_path = export_settings.export_path, export_name)
+		# # export_name = ''
+		# # indx = obj.name.index("_LOD")
+		# # if (indx != -1):
+		# # 	export_name = obj.name[0:indx]
+		# # ExportFbx(exported_objects, export_path = export_settings.export_path, export_name)
 
-		# Restore scene.
-		RestoreSceneObjectsFromCollected(exported_objects)
+		# # Restore scene.
+		# RestoreSceneObjectsFromCollected(exported_objects)
 
 		self.report({'INFO'}, "Export finished.")
 		return {'FINISHED'}
