@@ -12,7 +12,9 @@
 
 
 # Directories.
+__ARCHIVE/
 /__pycache__/
 /__old*/
 /_archive/
 /_test/
+__DOCS/
